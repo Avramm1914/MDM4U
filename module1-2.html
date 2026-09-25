@@ -1,105 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>MDM4U</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Roboto", sans-serif}
-.w3-bar-block .w3-bar-item {
-  padding: 16px;
-  font-weight: bold;
-}
-</style>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-</head>
-<body>
-<!--Navigation bar-->
-<div id="nav-placeholder">
+<h1>Méthodes d'échantillonnage</h1>
 
-</div>
+<h2>Échantillonnage volontaire</h2>
+<p><strong>Explication :</strong> Les sujets se portent eux-mêmes volontaires pour participer à l'étude. Ce type d'échantillon attire souvent des personnes ayant des opinions très tranchées (positives ou négatives) sur le sujet.</p>
+<p><strong>Exemple :</strong> Placer une boîte de suggestions à la cafétéria pour demander aux élèves s'ils sont pour ou contre le port de l'uniforme.</p>
 
-<script>
-$(function(){
-  $("#nav-placeholder").load("nav.html");
-});
-</script>
-<!--end of Navigation bar-->
+<h2>Échantillonnage aléatoire simple</h2>
+<p><strong>Explication :</strong> Chaque membre de la population a une chance égale et indépendante d'être sélectionné. Aucun biais conscient ou inconscient n'influence le choix.</p>
+<p><strong>Exemple :</strong> Tirer au sort 25 noms à l'aide d'un logiciel parmi la liste alphabétique complète de tous les élèves de l'école.</p>
 
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+<h2>Échantillonnage aléatoire stratifié</h2>
+<p><strong>Explication :</strong> On divise la population en sous-groupes homogènes appelés « strates » (ex. : selon le niveau scolaire ou le genre), puis on sélectionne de façon aléatoire un échantillon dans chaque strate, de façon proportionnelle à sa taille dans la population.</p>
+<p><strong>Exemple :</strong> Pour sonder 100 élèves, on sélectionne au hasard un nombre d'élèves de 9e, 10e, 11e et 12e année proportionnel au nombre total d'élèves dans chaque année.</p>
 
-<div class="w3-main" style="margin-left:250px;">
+<h2>Échantillonnage aléatoire en grappes</h2>
+<p><strong>Explication :</strong> On divise la population en groupes naturels appelés « grappes » (ex. : des classes, des quartiers, des équipes). Ensuite, on choisit au hasard certaines grappes et on étudie <em>tous</em> les individus qui s'y trouvent.</p>
+<p><strong>Exemple :</strong> Choisir au hasard 3 classes de mathématiques de l'école et sonder l'intégralité des élèves présents dans ces classes.</p>
 
-<div id="myTop" class="w3-container w3-top w3-theme w3-large">
-  <p><i class="fa fa-bars w3-button w3-teal w3-hide-large w3-xlarge" onclick="w3_open()"></i>
-  <span id="myIntro" class="w3-hide">MDM4U</span></p>
-</div>
-
-<header class="w3-container w3-theme" style="padding:64px 32px">
-  <h1 class="w3-xxxlarge">1.2 - L’échantillonnage</h1>
-</header>
-
-<div class="w3-container" style="padding:32px">
-
-<!-- Tu peux complètement modifier le contenu ci-dessous -->
-
-<h1>Méthodes d'échantillonage</h1>
-<h2>Échantillonage volontaire</h2>
-<p>Ici, tu donnes une explication du type d'échantillonage.  Donne un ou des exemples.</p>
-<h2>Échantillonage aléatoire simple</h2>
-<p>Ici, tu donnes une explication du type d'échantillonage.  Donne un ou des exemples.</p>
-<h2>Échantillonage aléatoire stratifié</h2>
-<p>Ici, tu donnes une explication du type d'échantillonage.  Donne un ou des exemples.</p>
-<h2>Échantillonage aléatoire en grappes</h2>
-<p>Ici, tu donnes une explication du type d'échantillonage.  Donne un ou des exemples.</p>
-<h2>Échantillonage aléatoire systématique</h2>
-<p>Ici, tu donnes une explication du type d'échantillonage.  Donne un ou des exemples.</p>
-
-
-<h1>Exercices</h1>
-<p>Tu vas supprimer ce paragraphe.  Dans le lien qui mène vers ton travail, change le # pour un lien vers la copie complète du devoir que tu auras copié dans ton Google Drive.</p>
-
-<p><a href="#" target="_blank">Exercices 1.1 et 1.2 - La représentation des données et l'échantillonage</a>
-</p>
-
-<!-- Tu peux complètement modifier le contenu par dessus cette ligne -->
-
-</div>
-
-<footer class="w3-container w3-theme" style="padding:32px">
-  <p>Contenu de cette page web par M. Gore (prénom: Pytha)</p>
-</footer>
-     
-</div>
-
-<script>
-// Open and close the sidebar on medium and small screens
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-// Change style of top container on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
-    document.getElementById("myIntro").classList.add("w3-show-inline-block");
-  } else {
-    document.getElementById("myIntro").classList.remove("w3-show-inline-block");
-    document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
-  }
-}
-
-</script>
-     
-</body>
-</html> 
+<h2>Échantillonnage aléatoire systématique</h2>
+<p><strong>Explication :</strong> On choisit un point de départ au hasard dans une liste ordonnée de la population, puis on sélectionne un individu à intervalles réguliers (tous les $k$-ièmes individus).</p>
+<p><strong>Exemple :</strong> Dans une liste alphabétique de 500 élèves, on choisit un nombre au hasard entre 1 et 10 (ex. : le 4e élève), puis on sélectionne chaque 10e élève de la liste (le 4e, le 14e, le 24e, etc.).</p>
