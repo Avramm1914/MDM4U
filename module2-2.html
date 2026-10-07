@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>MDM4U - 2.2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Roboto", sans-serif}
+.w3-bar-block .w3-bar-item {
+  padding: 16px;
+  font-weight: bold;
+}
+.calc-card {
+  background-color: #f1f1f1;
+  border-left: 6px solid #009688;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<!--Navigation bar-->
+<div id="nav-placeholder">
+
+</div>
+
+<script>
+$(function(){$("#nav-placeholder").load("nav.html");
+});
+</script>
+<!--end of Navigation bar-->
+
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:250px;">
+
+<div id="myTop" class="w3-container w3-top w3-theme w3-large">
+  <p><i class="fa fa-bars w3-button w3-teal w3-hide-large w3-xlarge" onclick="w3_open()"></i>
+  <span id="myIntro" class="w3-hide">MDM4U</span></p>
+</div>
+
+<header class="w3-container w3-theme" style="padding:64px 32px">
+  <h1 class="w3-xxxlarge">
+2.2 - Mesures de tendance centrale (Moyenne, Médiane, Mode)
+</h1>
+</header>
+
+<div class="w3-container" style="padding:32px">
+
+<!-- Tu peux complètement modifier le contenu ci-dessous -->
+
+<h1>1. Qu'est-ce que la tendance centrale ?</h1>
+<p>Les mesures de tendance centrale sont des valeurs statistiques qui permettent de résumer un ensemble de données en un seul point central. Les trois principales mesures sont la <strong>moyenne</strong>, la <strong>médiane</strong> et le <strong>mode</strong>.</p>
+
+<hr style="margin: 32px 0;">
+
+<h1>2. Outil Interactif de Calcul</h1>
+<p>Entre une liste de nombres séparés par des virgules ou des espaces (ex: <code>12, 15, 12, 18, 22, 19</code>) pour calculer instantanément la moyenne, la médiane et le mode, accompagnés des explications pas à pas :</p>
+
+<div class="calc-card">
+  <label for="dataInput"><b>Saisis tes données (nombres séparés par des virgules ou espaces) :</b></label>
+  <input type="text" id="dataInput" placeholder="Ex: 4, 8, 6, 5, 8, 3, 9" value="4, 8, 6, 5, 8, 3, 9">
+  <button class="w3-button w3-teal" onclick="calculerStatistiques()">Calculer</button>
+  
+  <div id="resultats" style="margin-top: 20px;">
+    <!-- Les résultats s'afficheront ici -->
+  </div>
+</div>
+
+<hr style="margin: 32px 0;">
+
+<h1>3. Explications théoriques</h1>
+
+<h3>La Moyenne</h3>
+<p>La moyenne arithmétique s'obtient en additionnant toutes les valeurs de la série de données, puis en divisant le total par le nombre total de valeurs.</p>
+<p><em>Formule :</em> $\text{Moyenne} = \frac{\sum x}{n}$</p>
+
+<h3>La Médiane</h3>
+<p>La médiane est la valeur située exactement au milieu d'un ensemble de données triées par ordre croissant (ou décroissant). S'il y a un nombre pair de données, c'est la moyenne des deux valeurs centrales.</p>
+
+<h3>Le Mode</h3>
+<p>Le mode est la valeur qui apparaît le plus fréquemment dans l'ensemble de données. Un jeu de données peut être unimodal (un seul mode), bimodal (deux modes) ou n'avoir aucun mode.</p>
+
+<hr style="margin: 32px 0;">
+
+<h1>4. Vidéo explicative et Exercices</h1>
+<p>Visionne la vidéo ou consulte les documents de cours pour approfondir le sujet :</p>
+<p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/6VVBVi0imAE?si=dQqFbaHWL9YT95ep" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
+<p>
+  <a href="https://docs.google.com/document/d/12oc7ineC6Raat8NJ-Ro2dabofS_Dec6tVJxZBhx1qYE/edit?usp=drivesdk" target="_blank">
+    Exercices et notes de cours 2.2
+  </a>
+</p>
+
+<!-- Tu peux complètement modifier le contenu par dessus cette ligne -->
+
+</div>
+
+<footer class="w3-container w3-theme" style="padding:32px">
+  <p>Contenu de cette page web par M. Gore (prénom: Pytha)</p>
+</footer>
+      
+</div>
+
+<script>
+// Script de calcul interactif
+function calculerStatistiques() {
+    let inputVal = document.getElementById("dataInput").value;
+    // Nettoyer et transformer l'entrée en tableau de nombres
+    let rawArray = inputVal.split(/[\s,]+/).map(item => parseFloat(item)).filter(item => !isNaN(item));
+    
+    let resDiv = document.getElementById("resultats");
+
+    if (rawArray.length === 0) {
+        resDiv.innerHTML = "<p style='color:red;'>Veuillez entrer des nombres valides.</p>";
+        return;
+    }
+
+    // 1. Tri pour médiane
+    let sorted = [...rawArray].sort((a, b) => a - b);
+    let n = sorted.length;
+
+    // 2. Calcul de la moyenne
+    let somme = sorted.reduce((acc, val) => acc + val, 0);
+    let moyenne = (somme / n).toFixed(2);
+
+    // 3. Calcul de la médiane
+    let mediane;
+    if (n % 2 === 0) {
+        mediane = (sorted[n / 2 - 1] + sorted[n / 2]) / 2;
+    } else {
+        mediane = sorted[Math.floor(n / 2)];
+    }
+
+    // 4. Calcul du mode
+    let freq = {};
+    let maxFreq = 0;
+    let modes = [];
+
+    sorted.forEach(val => {
+        freq[val] = (freq[val] || 0) + 1;
+        if (freq[val] > maxFreq) {
+            maxFreq = freq[val];
+        }
+    });
+
+    for (let val in freq) {
+        if (freq[val] === maxFreq) {
+            modes.push(val);
+        }
+    }
+
+    let modeTexte = "";
+    if (maxFreq === 1 && Object.keys(freq).length === n) {
+        modeTexte = "Aucun mode (toutes les valeurs n'apparaissent qu'une seule fois)";
+    } else {
+        modeTexte = modes.join(", ") + " (apparaît " + maxFreq + " fois)";
+    }
+
+    // Affichage des résultats
+    resDiv.innerHTML = `
+        <div class="w3-panel w3-white w3-card w3-padding">
+            <p><strong>Données triées :</strong> [ ${sorted.join(", ")} ] (Total : ${n} valeurs)</p>
+            <hr>
+            <p><strong>🟢 Moyenne :</strong> ${moyenne} <br><small><i>Calcul : Somme (${somme}) ÷ Nombre de valeurs (${n}) = ${moyenne}</i></small></p>
+            <p><strong>🔵 Médiane :</strong> ${mediane} <br><small><i>Valeur centrale de la liste triée.</i></small></p>
+            <p><strong>🟠 Mode :</strong> ${modeTexte} <br><small><i>Valeur(s) avec la fréquence la plus élevée.</i></small></p>
+        </div>
+    `;
+}
+
+// Lancer le calcul au chargement pour l'exemple par défaut
+window.onload = function() {
+    calculerStatistiques();
+};
+
+// Open and close the sidebar on medium and small screens
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Change style of top container on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+    document.getElementById("myIntro").classList.add("w3-show-inline-block");
+  } else {
+    document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+    document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+  }
+}
+</script>
+
+</body>
+</html>
