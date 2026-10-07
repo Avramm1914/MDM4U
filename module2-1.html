@@ -13,14 +13,19 @@ body {font-family: "Roboto", sans-serif}
   padding: 16px;
   font-weight: bold;
 }
+.distribution-container {
+  margin-bottom: 40px;
+}
+iframe {
+  max-width: 100%;
+}
 </style>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-<!--Navigation bar-->
-<div id="nav-placeholder">
 
-</div>
+<!--Navigation bar-->
+<div id="nav-placeholder"></div>
 
 <script>
 $(function(){
@@ -39,24 +44,34 @@ $(function(){
 </div>
 
 <header class="w3-container w3-theme" style="padding:64px 32px">
-  <h1 class="w3-xxxlarge">
-2.1 - Les distributions des données
-</h1>
+  <h1 class="w3-xxxlarge">2.1 - Les distributions des données</h1>
 </header>
 
 <div class="w3-container" style="padding:32px">
 
-<!-- Tu peux complètement modifier le contenu ci-dessous -->
-<h2>La distribution en U<h2>
-<iframe src="https://www.desmos.com/calculator/ogws2fi8qo?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-<h2>Une distribution asymétrique (asymétrie positive)<h2>
-<iframe src="https://www.desmos.com/calculator/urchbmuebo?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-<h2>La distribution uniforme<h2>
-<iframe src="https://www.desmos.com/calculator/xvhzy1andl?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-<h2>Une distribution asymétrique (asymétrie négative)<h2>
-<iframe src="https://www.desmos.com/calculator/cu3ap4ewx8?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+  <!-- Section: La distribution en U -->
+  <div class="distribution-container">
+    <h2>La distribution en U</h2>
+    <iframe src="https://www.desmos.com/calculator/ogws2fi8qo?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+  </div>
 
-<!-- Tu peux complètement modifier le contenu par dessus cette ligne -->
+  <!-- Section: Une distribution asymétrique (asymétrie positive) -->
+  <div class="distribution-container">
+    <h2>Une distribution asymétrique (asymétrie positive)</h2>
+    <iframe src="https://www.desmos.com/calculator/urchbmuebo?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+  </div>
+
+  <!-- Section: La distribution uniforme -->
+  <div class="distribution-container">
+    <h2>La distribution uniforme</h2>
+    <iframe src="https://www.desmos.com/calculator/xvhzy1andl?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+  </div>
+
+  <!-- Section: Une distribution asymétrique (asymétrie négative) -->
+  <div class="distribution-container">
+    <h2>Une distribution asymétrique (asymétrie négative)</h2>
+    <iframe src="https://www.desmos.com/calculator/cu3ap4ewx8?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+  </div>
 
 </div>
 
