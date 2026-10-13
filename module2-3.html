@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Les mesures de dispersion</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {font-family: "Raleway", sans-serif}
+        body {background-color: #f1f1f1;}
+        .w3-sidebar {z-index: 3; width: 300px; top: 0; bottom: 0; position: fixed !important;}
+        .main-content {margin-left: 300px; margin-top: 40px;}
+        @media screen and (max-width: 992px) {
+            .w3-sidebar {display: none;}
+            .main-content {margin-left: 0;}
+        }
+        .card-section {background: white; padding: 24px; margin-bottom: 24px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+    </style>
+</head>
+<body>
 
+<!-- Sidebar / Menu -->
+<nav class="w3-sidebar w3-light-grey w3-bar-block w3-card" id="mySidebar">
+    <div class="w3-container w3-teal">
+        <h3>Portfolio de Milo</h3>
+        <p class="w3-small">Mathématiques (MDM4U)</p>
+    </div>
+    <div class="w3-bar-item w3-button w3-padding-16" style="font-weight:bold;">Sommaire</div>
+    <a href="#mesures" class="w3-bar-item w3-button w3-padding">1. Les mesures de dispersion</a>
+    <a href="#methodes" class="w3-bar-item w3-button w3-padding">2. Méthodes de mesure</a>
+    <a href="#calcul" class="w3-bar-item w3-button w3-padding">3. Calcul de l'écart type</a>
+    <a href="#ressources" class="w3-bar-item w3-button w3-padding">4. Ressources & Exercices</a>
+</nav>
+
+<!-- Page Content -->
+<div class="main-content w3-container" style="max-width:900px;">
+
+    <!-- Header -->
+    <header class="w3-container w3-padding-32 w3-center">
+        <h1><b>Les mesures de dispersion</b></h1>
+        <p class="w3-text-grey">Cours de mathématiques - Module d'apprentissage</p>
+    </header>
+
+    <!-- Section 1 -->
+    <div id="mesures" class="card-section">
+        <h2>À quoi servent les mesures de dispersion ?</h2>
+        <hr>
+        <p>
+            Les mesures de dispersion permettent de décrire la variabilité ou l'étalement d'un ensemble de données autour d'une valeur centrale (comme la moyenne ou la médiane). Alors que les mesures de tendance centrale indiquent où se situent les données en moyenne, les mesures de dispersion montrent si les données sont regroupées de façon serrée ou si elles sont très dispersées.
+        </p>
+    </div>
+
+    <!-- Section 2 -->
+    <div id="methodes" class="card-section">
+        <h2>Les méthodes de mesure de dispersion</h2>
+        <hr>
+        
+        <h3>1. L'étendue</h3>
+        <p><b>Qu'est-ce que c'est ?</b> L'étendue est la différence entre la valeur maximale et la valeur minimale d'un ensemble de données. Elle donne une idée globale de l'écart total couvert par les données, mais elle est très sensible aux valeurs aberrantes.</p>
+
+        <h3>2. Les quartiles</h3>
+        <p><b>Définition et explication :</b> Les quartiles sont des valeurs qui divisent un ensemble de données ordonnées en quatre parties égales (en quatre quarts de 25 % chacun) :</p>
+        <ul>
+            <li><b>Q1 (Premier quartile) :</b> 25 % des données sont inférieures ou égales à cette valeur.</li>
+            <li><b>Q2 (Deuxième quartile) :</b> Correspond à la médiane (50 %).</li>
+            <li><b>Q3 (Troisième quartile) :</b> 75 % des données sont inférieures ou égales à cette valeur.</li>
+        </ul>
+
+        <h3>3. L'écart interquartile</h3>
+        <p><b>Définition et explication :</b> L'écart interquartile (\(EIQ\)) correspond à la différence entre le troisième quartile et le premier quartile (\(EIQ = Q_3 - Q_1\)). Il mesure la dispersion des 50 % des données centrales, ce qui permet d'éliminer l'influence des valeurs extrêmes ou aberrantes.</p>
+
+        <h3>4. L'écart type</h3>
+        <p><b>Définition et explication :</b> L'écart type est la mesure de dispersion la plus courante et la plus importante en statistiques. Il indique à quelle distance moyenne les données se trouvent par rapport à la moyenne arithmétique. Un écart type faible signifie que les données sont regroupées près de la moyenne, tandis qu'un écart type élevé indique qu'elles sont très étalées.</p>
+    </div>
+
+    <!-- Section 3 -->
+    <div id="calcul" class="card-section">
+        <h2>Comment calculer l'écart type ?</h2>
+        <hr>
+        <p>Le calcul de l'écart type (\(\sigma\) pour une population ou \(s\) pour un échantillon) s'effectue généralement par les étapes suivantes :</p>
+        <ol>
+            <li>Calculer la moyenne arithmétique de l'ensemble des données.</li>
+            <li>Soustraire la moyenne de chaque valeur individuelle pour obtenir les écarts par rapport à la moyenne.</li>
+            <li>Élever au carré chacun de ces écarts pour éliminer les signes négatifs.</li>
+            <li>Calculer la somme de tous ces carrés.</li>
+            <li>Diviser cette somme par le nombre de données (ou par \(n - 1\) s'il s'agit d'un échantillon) pour obtenir la variance.</li>
+            <li>Extraire la racine carrée de la variance afin de retrouver l'unité d'origine des données : c'est l'<b>écart type</b>.</li>
+        </ol>
+    </div>
+
+    <!-- Section 4 -->
+    <div id="ressources" class="card-section">
+        <h2>Ressources et Liens du Cours</h2>
+        <hr>
+        <p><b>Google Slides sur ce cours :</b><br>
+           <a href="#" target="_blank" class="w3-text-teal">🔗 Accéder au Google Slides de la présentation</a>
+        </p>
+        
+        <p><b>Lien vers les exercices :</b><br>
+           <a href="#" target="_blank" class="w3-text-teal">🔗 Exercices 2.3 (Données sélectables)</a>
+        </p>
+
+        <h3>Liste des sources utilisées</h3>
+        <ul>
+            <li>Notes de cours de mathématiques (MDM4U)</li>
+            <li>Documents d'exercices officiels du module</li>
+            <li>Manuels de référence en statistique descriptive</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-16 w3-center w3-text-grey">
+        <p>Portfolio numérique - Réalisé dans le cadre des cours de 12e année.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
