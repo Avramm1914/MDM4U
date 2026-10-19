@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Module 2.4 : La distribution normale</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {font-family: "Raleway", sans-serif}
+        body {background-color: #f1f1f1;}
+        .w3-sidebar {z-index: 3; width: 300px; top: 0; bottom: 0; position: fixed !important;}
+        .main-content {margin-left: 300px; margin-top: 40px;}
+        @media screen and (max-width: 992px) {
+            .w3-sidebar {display: none;}
+            .main-content {margin-left: 0;}
+        }
+        .card-section {background: white; padding: 24px; margin-bottom: 24px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+        .img-container {text-align: center; margin: 20px 0;}
+        .img-container img {max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);}
+    </style>
+</head>
+<body>
 
+<!-- Sidebar / Menu -->
+<nav class="w3-sidebar w3-light-grey w3-bar-block w3-card" id="mySidebar">
+    <div class="w3-container w3-teal">
+        <h3>Portfolio de Milo</h3>
+        <p class="w3-small">Mathématiques (MDM4U)</p>
+    </div>
+    <div class="w3-bar-item w3-button w3-padding-16" style="font-weight:bold;">Sommaire Module 2.4</div>
+    <a href="#distribution" class="w3-bar-item w3-button w3-padding">1. Distribution Normale</a>
+    <a href="#exercices1" class="w3-bar-item w3-button w3-padding">2. Exercices 2.4 - Partie 1</a>
+    <a href="#travailmain" class="w3-bar-item w3-button w3-padding">3. Travail papier-crayon</a>
+    <a href="#sources" class="w3-bar-item w3-button w3-padding">4. Sources utilisées</a>
+</nav>
+
+<!-- Page Content -->
+<div class="main-content w3-container" style="max-width:900px;">
+
+    <!-- Header -->
+    <header class="w3-container w3-padding-32 w3-center">
+        <h1><b>Module 2.4 : La distribution normale</b></h1>
+        <p class="w3-text-grey">Cours de mathématiques - Data Management (MDM4U)</p>
+    </header>
+
+    <!-- Section 1: Distribution Normale & Image -->
+    <div id="distribution" class="card-section">
+        <h2>1. Qu'est-ce qu'une distribution normale ?</h2>
+        <hr>
+        <p>
+            La distribution normale (ou loi normale / courbe de Gauss) est une distribution de probabilité continue en forme de cloche. Elle est symétrique par rapport à sa moyenne, et sa dispersion est caractérisée par son écart type. C'est l'un des concepts les plus importants en statistiques.
+        </p>
+        
+        <div class="img-container">
+            <!-- Image hébergée en externe -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Empirical_Rule.svg/800px-Empirical_Rule.svg.png" alt="Schéma de la distribution normale et règle empirique">
+            <p class="w3-small w3-text-grey" style="margin-top: 8px;">
+                Illustration de la loi normale et de la règle empirique (68-95-99.7).<br>
+                Source de l'image : <a href="https://commons.wikimedia.org/wiki/File:Empirical_Rule.svg" target="_blank" class="w3-text-teal">Wikimedia Commons</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Section 2: Exercices 2.4 - Partie 1 (Desmos/Sheets) -->
+    <div id="exercices1" class="card-section">
+        <h2>2. Exercices 2.4 - Partie 1 (Desmos / Google Sheets)</h2>
+        <hr>
+        <p>
+            Cette section présente les résolutions, graphiques et analyses réalisés à l'aide d'outils numériques pour la première partie des exercices 2.4.
+        </p>
+        <ul>
+            <li><b>Lien vers le graphique Desmos :</b> <a href="https://www.desmos.com" target="_blank" class="w3-text-teal">🔗 Consulter le modèle interactif Desmos</a></li>
+            <li><b>Lien vers le tableau Google Sheets :</b> <a href="https://docs.google.com/spreadsheets" target="_blank" class="w3-text-teal">🔗 Consulter les calculs de données sur Google Sheets</a></li>
+        </ul>
+    </div>
+
+    <!-- Section 3: Travail à la main (Papier-Crayon) -->
+    <div id="travailmain" class="card-section">
+        <h2>3. Réponses et résolutions manuscrites</h2>
+        <hr>
+        <p>
+            Vous trouverez ci-dessous le lien vers la version numérisée des résolutions d'exercices rédigées à la main (format papier-crayon).
+        </p>
+        <p>
+            👉 <a href="#" target="_blank" class="w3-text-teal">🔗 Accéder au document numérisé du travail manuscrit (Google Drive)</a>
+        </p>
+    </div>
+
+    <!-- Section 4: Liste des sources -->
+    <div id="sources" class="card-section">
+        <h2>4. Liste des sources utilisées</h2>
+        <hr>
+        <ul>
+            <li>Notes de cours officielles - Module 2 (MDM4U)</li>
+            <li>Wikimedia Commons - Graphique de la règle empirique (\(\mu \pm \sigma\))</li>
+            <li>Outils de modélisation mathématique Desmos & Google Sheets</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-16 w3-center w3-text-grey">
+        <p>Portfolio numérique de Milo - Module 2.4</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
